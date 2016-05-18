@@ -1,0 +1,27 @@
+body {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+.table-responsive[data-pattern="priority-columns"] th,
+.table-responsive[data-pattern="priority-columns"] th[data-priority] {
+	background-color: #F1F1F1;
+	border-color: #F1F1F1;
+	border-bottom-color: #DDDDDD;
+	border-bottom-width:1px;
+}
+.table-striped>tbody>tr:nth-child(odd)>td{
+	background-color: #FFF7F0;
+}
+.table-striped.table-hover>tbody>tr:hover>td{
+	background-color: #D9EDF6;
+}
+
+table.focus-on tbody tr.focused td{
+	background-color: #D9EDF6;
+}
+table.focus-on tbody tr.unfocused td{
+	color: rgba(0,0,0,1);
+}
