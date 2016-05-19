@@ -5,13 +5,30 @@ define(["jquery", "artTemplate"], function($, template) {
 		if (opts.hasHead) {
 
 		}
+		template.helper("type", function(data) {
+			var btn = "";
+			switch (data) {
+				case 0:
+					btn = '终止';
+					break;
+				case 1:
+					btn = '继续';
+					break;
+				case 2:
+					btn = '取消';
+					break;
+				default:
+					break;
+			}
+			return btn;
+		});
 		this.source =
 			'<tbody>' +
 			'{{each data as value i}}<tr>' +
 			'{{each value as item j}}<td data-type="{{j}}">' +
 			'{{if j == "operation"}}' +
 			'{{each item as option k}}' +
-			'<span>{{option}}</span>' +
+			'<button class="btn">{{type(option)}}</button>' +
 			'{{/each}}' +
 			'{{else}}{{item}}' +
 			'{{/if}}' +
