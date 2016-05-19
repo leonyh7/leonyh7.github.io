@@ -1,0 +1,30 @@
+[
+	{
+		"colName": "NO",
+		"priority": "1"
+	}, {
+		"colName": "活动项目",
+		"priority": "2"
+	}, {
+		"colName": "活动名称",
+		"priority": "0"
+	}, {
+		"colName": "活动性质",
+		"priority": "3"
+	}, {
+		"colName": "报名人数",
+		"priority": "4"
+	}, {
+		"colName": "活动总人数",
+		"priority": "5"
+	}, {
+		"colName": "开始时间",
+		"priority": "6"
+	}, {
+		"colName": "活动状态",
+		"priority": "6"
+	}, {
+		"colName": "操作",
+		"priority": "0"
+	}
+]

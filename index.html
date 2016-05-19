@@ -23,7 +23,37 @@
 
 		<link rel="stylesheet" href="css/rwd-table.min.css?v=5.0.3">
 		<link rel="stylesheet" href="css/doc.css">
-			
+
+		<script src="js/require.js" type="text/javascript" charset="utf-8"></script>
+
+		<script>
+			require.config({
+				urlArgs: require.urlArgs,
+				shim: {
+					"bootstrap": ["jquery"],
+					"rwd-table": ["jquery"]
+				},
+				paths: {
+					"data": ["js/data"],
+					"table": ["js/table"],
+					"jquery": ["js/jquery.min"],
+					"bootstrap": ["js/bootstrap.min"],
+					"artTemplate": ["js/template"],
+					"rwd-table": ["js/rwd-table.min"]
+				},
+			});
+			require(["data", "jquery", "bootstrap", "artTemplate", "rwd-table", "table"], function(data, $, boot, art, rwd, table) {
+				var thead = data.getJson('js/data-head.json'),
+					tbody = data.getJson('js/data-body.json');
+				table.init({
+					id:'tech-companies-1',
+					data: tbody,
+					hasHead: true,
+					head: thead
+				});
+				$('.table-responsive').responsiveTable();
+			});
+		</script>
 
 	</head>
 
@@ -48,9 +78,8 @@
 				<div class="page-header">
 					<h2>Demo</h2>
 				</div>
-
 				<div class="table-responsive" data-pattern="priority-columns">
-					<table cellspacing="0" id="tech-companies-1" class="table table-small-font table-bordered table-hover table-striped">
+					<table id="tech-companies-1" class="table table-small-font table-bordered table-hover table-striped">
 						<thead>
 							<tr>
 								<th>Company</th>
@@ -64,7 +93,7 @@
 								<th data-priority="6">priority="6"</th>
 							</tr>
 						</thead>
-						<tbody>
+						<!--<tbody>
 							<tr>
 								<td>GOOG <span class="co-name">Google Inc.</span></td>
 								<td>597.74</td>
@@ -143,8 +172,8 @@
 								<td>18.16</td>
 							</tr>
 
-							
-						</tbody>
+						</tbody>-->
+
 					</table>
 				</div>
 
@@ -152,23 +181,6 @@
 			<!-- end container -->
 		</section>
 		<!-- end section -->
-
-		<script src="js/jquery.min.js"></script>
-
-		<!-- Latest compiled and minified Bootstrap JavaScript -->
-		<script src="js/bootstrap.min.js"></script>
-
-		<script src="js/rwd-table.min.js"></script>
-		<script>
-			$(function() {
-				$('.table-responsive').responsiveTable({
-					//stickyTableHeader:false,//默认为true|表头保持在顶部
-					fixedNavbar: '#navbar', //是否有fixed导航栏
-					//addDisplayAllBtn:false,//默认为true|显示Display All按钮
-					//addDisplayBtn:false//显示Display按钮
-				});
-			});
-		</script>
 
 	</body>
 
