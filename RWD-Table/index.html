@@ -31,34 +31,40 @@
 				urlArgs: require.urlArgs,
 				shim: {
 					"bootstrap": ["jquery"],
-					"rwd-table": ["jquery"]
+					"rwd-table": ["jquery"],
+					"artTemplate": {
+						exports: 'template'
+					}
 				},
 				paths: {
 					"data": ["js/data"],
 					"table": ["js/table"],
 					"jquery": ["js/jquery.min"],
 					"bootstrap": ["js/bootstrap.min"],
-					"artTemplate": ["js/template"],
-					"rwd-table": ["js/rwd-table.min"]
+					"artTemplate": ["js/artTemplate"],
+					"rwd-table": ["js/rwd-table"]
 				},
 			});
-			require(["data", "jquery", "bootstrap", "artTemplate", "rwd-table", "table"], function(data, $, boot, art, rwd, table) {
+			require(["data", "jquery", "bootstrap", "table"], function(data, $, boot, table) {
 				var thead = data.getJson('js/data-head.json'),
 					tbody = data.getJson('js/data-body.json');
 				table.init({
-					id:'tech-companies-1',
+					id: 'tech-companies-1',
 					data: tbody,
 					hasHead: true,
-					head: thead
+					head: thead,
+					hasNo: true,
+					hasCheckBox: true,
+					rwdOption: {
+					}
 				});
-				$('.table-responsive').responsiveTable();
 			});
 		</script>
+		
 
 	</head>
 
 	<body>
-
 		<section id="demo">
 			<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
 				<div class="container">
@@ -80,99 +86,6 @@
 				</div>
 				<div class="table-responsive" data-pattern="priority-columns">
 					<table id="tech-companies-1" class="table table-small-font table-bordered table-hover table-striped">
-						<thead>
-							<tr>
-								<th>Company</th>
-								<th data-priority="1">priority="1"</th>
-								<th data-priority="1">priority="1"</th>
-								<th data-priority="2">priority="2"</th>
-								<th data-priority="3">priority="3"</th>
-								<th data-priority="4">priority="4"</th>
-								<th data-priority="5">priority="5"</th>
-								<th data-priority="6">priority="6"</th>
-								<th data-priority="6">priority="6"</th>
-							</tr>
-						</thead>
-						<!--<tbody>
-							<tr>
-								<td>GOOG <span class="co-name">Google Inc.</span></td>
-								<td>597.74</td>
-								<td>12:12PM</td>
-								<td>14.81 (2.54%)</td>
-								<td>582.93</td>
-								<td>597.95</td>
-								<td>597.73 x 100</td>
-								<td>597.91 x 300</td>
-								<td>731.10</td>
-							</tr>
-							<tr>
-								<td>AAPL <span class="co-name">Apple Inc.</span></td>
-								<td>378.94</td>
-								<td>12:22PM</td>
-								<td>5.74 (1.54%)</td>
-								<td>373.20</td>
-								<td>381.02</td>
-								<td>378.92 x 300</td>
-								<td>378.99 x 100</td>
-								<td>505.94</td>
-							</tr>
-							<tr>
-								<td>AMZN <span class="co-name">Amazon.com Inc.</span></td>
-								<td>191.55</td>
-								<td>12:23PM</td>
-								<td>3.16 (1.68%)</td>
-								<td>188.39</td>
-								<td>194.99</td>
-								<td>191.52 x 300</td>
-								<td>191.58 x 100</td>
-								<td>240.32</td>
-							</tr>
-							<tr>
-								<td>ORCL <span class="co-name">Oracle Corporation</span></td>
-								<td>31.15</td>
-								<td>12:44PM</td>
-								<td>1.41 (4.72%)</td>
-								<td>29.74</td>
-								<td>30.67</td>
-								<td>31.14 x 6500</td>
-								<td>31.15 x 3200</td>
-								<td>36.11</td>
-							</tr>
-							<tr>
-								<td>MSFT <span class="co-name">Microsoft Corporation</span></td>
-								<td>25.50</td>
-								<td>12:27PM</td>
-								<td>0.66 (2.67%)</td>
-								<td>24.84</td>
-								<td>25.37</td>
-								<td>25.50 x 71100</td>
-								<td>25.51 x 17800</td>
-								<td>31.50</td>
-							</tr>
-							<tr>
-								<td>CSCO <span class="co-name">Cisco Systems, Inc.</span></td>
-								<td>18.65</td>
-								<td>12:45PM</td>
-								<td>0.97 (5.49%)</td>
-								<td>17.68</td>
-								<td>18.23</td>
-								<td>18.65 x 10300</td>
-								<td>18.66 x 24000</td>
-								<td>21.12</td>
-							</tr>
-							<tr>
-								<td>YHOO <span class="co-name">Yahoo! Inc.</span></td>
-								<td>15.81</td>
-								<td>12:25PM</td>
-								<td>0.11 (0.67%)</td>
-								<td>15.70</td>
-								<td>15.94</td>
-								<td>15.79 x 6100</td>
-								<td>15.80 x 17000</td>
-								<td>18.16</td>
-							</tr>
-
-						</tbody>-->
 
 					</table>
 				</div>
@@ -181,6 +94,10 @@
 			<!-- end container -->
 		</section>
 		<!-- end section -->
+		<div id="content">
+		</div>
+		<div id="content2">
+		</div>
 
 	</body>
 

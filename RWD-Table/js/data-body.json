@@ -5,10 +5,10 @@
 		"actNature": "团队报名",
 		"actNum": "12",
 		"actStartTime": "200",
-		"actTotalNum": "/Date(2016-01-12 16:40)/",
+		"actTotalNum": "2016-04-12 16:40",
 		"actState": "报名中",
-		"operation":[0,2]
-	},{
+		"operation": "a"
+	}, {
 		"activity": "排球",
 		"actName": "周末人篮球赛",
 		"actNature": "团队报名",
@@ -16,8 +16,8 @@
 		"actStartTime": "200",
 		"actTotalNum": "2016-01-12 16:40",
 		"actState": "报名中",
-		"operation":[1,2]
-	},{
+		"operation": "b"
+	}, {
 		"activity": "篮球",
 		"actName": "周末无人篮球赛",
 		"actNature": "团队报名",
@@ -25,8 +25,8 @@
 		"actStartTime": "200",
 		"actTotalNum": "2016-01-12 16:40",
 		"actState": "报名中",
-		"operation":[]
-	},{
+		"operation": ""
+	}, {
 		"activity": "篮球",
 		"actName": "周末无人篮球赛",
 		"actNature": "团队报名",
@@ -34,8 +34,8 @@
 		"actStartTime": "200",
 		"actTotalNum": "2016-01-12 16:40",
 		"actState": "报名中",
-		"operation":[]
-	},{
+		"operation": ""
+	}, {
 		"activity": "篮球",
 		"actName": "周末无人篮球赛",
 		"actNature": "团队报名",
@@ -43,6 +43,6 @@
 		"actStartTime": "200",
 		"actTotalNum": "2016-01-12 16:40",
 		"actState": "报名中",
-		"operation":[]
+		"operation": ""
 	}
 ]

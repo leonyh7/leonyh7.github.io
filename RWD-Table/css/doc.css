@@ -1,10 +1,3 @@
-body {
-	padding-top: 50px;
-	padding-bottom: 30px;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale
-}
 .table-responsive[data-pattern="priority-columns"] th,
 .table-responsive[data-pattern="priority-columns"] th[data-priority] {
 	background-color: #F1F1F1;

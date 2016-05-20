@@ -72,7 +72,7 @@
 
 		//create sticky table head
 		if (this.options.stickyTableHeader) {
-			this.createStickyTableHeader();
+			//this.createStickyTableHeader();
 		}
 
 		// hide toggle button if the list is empty
