@@ -1,0 +1,47 @@
+//@width tab整体宽度
+//@headHeight 头部高度;
+//@contentHeight 内容高度;
+//@liWidth 头部li宽度;
+//@liheight 头部li高度;
+//@li-size 头部li字体大小;
+
+.tab() {
+    >ul {
+        .size(@width,@headHeight);
+        font-size: 0;
+        border-bottom: solid 1px @brown;
+        >li {
+            cursor: pointer;
+            display: inline-block;
+            .size(@liWidth,@liheight);
+            line-height: @liheight;
+            text-align: center;
+            .border(@brown);
+            font-size: @li-size;
+            color: @brown;
+            font-size: 28px;
+            background-color: #edeeed;
+            &:first-child{
+                margin-right: @width - (2 * @liWidth);
+            }
+            &.active{
+                background-color: white;
+                height: @headHeight;
+                border-bottom: none;
+                margin-bottom: 0;
+                color: @green;
+            }
+            
+        }
+    }
+    >.tab-content{
+        .border(@brown);
+        border-top: none;
+        .tab-item{
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+    }
+}

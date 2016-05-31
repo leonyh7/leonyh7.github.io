@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/header.activity.css"/>
+		<link rel="stylesheet" type="text/css" href="css/activity/activitySign.css" />
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="header-top">
+				<ul class="center-page">
+					<li>欢迎信息</li>
+					<li><a>登录</a></li>
+					<li><a>注册</a></li>
+				</ul>
+			</div>
+			<div class="header-center">
+				<div class="white-page">
+					<div class="center-page">
+						<div class="logo-img fl">
+							<img src="images/logo.jpg" width="211" height="60" alt="logo" />
+						</div>
+						<div class="header-search">
+							<input type="text" placeholder="搜索新闻、活动、人" />
+							<img src="images/search-btn-activity.png" />
+						</div>
+						<div class="header-nav">
+							<div class="center-page">
+								<ul>
+									<li>六个字六个字<i class="iconfont">&#xe613;</i>
+										<div class="nav-extend">
+											<ul>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+											</ul>
+										</div>
+									</li>
+									<li>六个字六个字<i class="iconfont">&#xe613;</i>
+										<div class="nav-extend">
+											<ul>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+											</ul>
+										</div>
+									</li>
+									<li>六个字六个字<i class="iconfont">&#xe613;</i>
+										<div class="nav-extend">
+											<ul>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+												<li>亲，你好哇</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="center-page">
+				<div class="breadcrumb">
+					当前位置：<a href="">活动报名</a>><a href="">环湖骑行 湖边烧烤五星级露营</a>><a href="">我要报名</a>
+				</div>
+				<div class="content">
+					<div class="tab sign-form">
+						<ul data-target="sign">
+							<li class="active">个人报名</li>
+							<li>团队（多人）报名</li>
+						</ul>
+						<div class="tab-content" id="sign">
+							<div class="tab-item person active">
+								<div class="input name"><span>姓名</span><input type="text" placeholder="请输入真实姓名" /></div>
+								<div class="input tel"><span>联系电话</span><input type="text" placeholder="请输入11位数字" /></div>
+								<div class="input sex">
+									<span>性别</span>
+									<input type="radio" id="male" name="sex" checked />
+									<label for="male">男</label>
+									<input type="radio" id="female" name="sex" />
+									<label for="female">女</label>
+								</div>
+								<div class="input identify"><span>身份证</span><input type="text" placeholder="请输入正确数字" /></div>
+							</div>
+							<div class="tab-item team">
+								<div class="mid-size team-name input">
+									<span>团队名称</span><input type="text" placeholder="请填写团队名称" />
+								</div>
+								<div class="mid-size input">
+									<div class="title">
+										<span>本活动最多支持10人报名</span>
+									</div>
+									<div class="tab tab-wrapper">
+										<ul class="tab-num" data-target="team">
+											<li>队</li>
+											<li>2</li>
+										</ul>
+										<div class="add-num">
+											<div class="add">+</div>
+											<p>添加成员</p>
+										</div>
+									</div>
+								</div>
+								<div id="team" class="team-wrap">
+									<div class="tab-item active" data-num="1">
+										<div class="delete hidden"><button type="button">删除</button></div>
+										<div class="team-info">
+											<div class="member">团队队长个人信息</div>
+											<div class="input name"><span>姓名</span><input type="text" placeholder="请输入真实姓名" /></div>
+											<div class="input tel"><span>联系电话</span><input type="text" placeholder="请输入11位数字" /></div>
+											<div class="input sex">
+												<span>性别</span>
+												<input type="radio" id="male1" name="sex1" checked />
+												<label for="male1">男</label>
+												<input type="radio" id="female1" name="sex1" />
+												<label for="female1">女</label>
+											</div>
+											<div class="input identify"><span>身份证</span><input type="text" placeholder="请输入正确数字" /></div>
+										</div>
+									</div>
+									<div class="tab-item" data-num="2">
+										<div class="delete hidden"><button type="button">删除</button></div>
+										<div class="team-info">
+											<div class="member"><span>2</span>号队员个人信息</div>
+											<div class="input name"><span>姓名</span><input type="text" placeholder="请输入真实姓名" /></div>
+											<div class="input tel"><span>联系电话</span><input type="text" placeholder="请输入11位数字" /></div>
+											<div class="input sex">
+												<span>性别</span>
+												<input type="radio" id="male2" name="sex2" checked />
+												<label for="male2">男</label>
+												<input type="radio" id="female2" name="sex2" />
+												<label for="female2">女</label>
+											</div>
+											<div class="input identify"><span>身份证</span><input type="text" placeholder="请输入正确数字" /></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="sign-confirm">
+						<div class="info">
+							<div class="info-title">[环湖骑行] 湖边烧烤五星级露营</div>
+							<p>活动时间：16.05.12-16.05.14</p>
+							<p>活动地点<a href="" class="location">杭州市西湖区北高峰</a></p>
+							<p>主办方：体育协会</p>
+							<p>报名/总人数：<span class="mid orange">15</span>/30</p>
+							<p>报名费：<span class="large orange">￥600</span>/人</p>
+						</div>
+						<div class="settle">
+							<div class="title"><span>费用结算</span></div>
+							<p>人数：<span class="large orange">1</span></p>
+							<p>金额：<span class="large">￥600</span></p>
+							<button class="btn" type="button" id="confirm">确认报名</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="footer">
+			<ul>
+				<li>关于体育协会 - 联系我们</li>
+				<li>&copy; 2003-2016 All-China Sports Federation Website. All rights reserved.中华全国体育总会网版权所有</li>
+				<li>网上传播视听节目许可证 编号：0105094 发证机关：国家广播电影电视总局</li>
+				<li>ICP经营许可证：京ICP证030713号　京公网安备110101002608号</li>
+				<li>本网站由呼啦伴伴网络科技有限公司提供制作及技术支持</li>
+				<li>客服及报障电话：4008102008 联系邮箱：<a href="mailto:tizongwork@sports.cn">tizongwork@sports.cn</a></li>
+			</ul>
+		</div>
+
+		<script src="js/tab.js" type="text/javascript" charset="utf-8"></script>
+		<script src="plugins/wwdialog.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/actSign.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

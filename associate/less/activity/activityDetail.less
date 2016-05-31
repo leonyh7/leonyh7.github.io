@@ -1,0 +1,116 @@
+@import "../variable.less";
+@import "../mixin/content.less";
+@import "../mixin/bread.less";
+@import "../mixin/angle.less";
+body {
+    .content(180px);
+}
+.act-head {
+    .acty {
+        img {
+            width: 100%;
+        }
+        .make-angle(440px,240px,@green,156px);
+        .green-angle {
+            font-size: 24px;
+            padding-top: 8px;
+        }
+    }
+    .info {
+        .size(582px,240px);
+        margin-left: 38px;
+        padding: 14px 0 0 20px;
+        border-left: dashed 1px @dark;
+        color: @dark;
+        .info-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            span {
+                font-size: 28px;
+            }
+        }
+        p {
+            font-size: 16px;
+            line-height: 26px;
+        }
+        .location {
+            color: @green;
+            background-image: url("../../images/icon-location.png");
+            background-repeat: no-repeat;
+            background-position-y: center;
+            padding-left: 20px;
+            margin-left: 30px;
+        }
+        .dead-line {
+            color: @red;
+            font-size: 18px;
+            margin-top: 13px;
+            .time {
+                &:first-child {
+                    margin-left: 10px;
+                }
+                display: inline-block;
+                position: relative;
+                color: white;
+                background: linear-gradient(#f34b4b 50%,#f62f2f 50%);
+                padding: 0 4px;
+                border-radius: 3px;
+                overflow: initial;
+                margin-right: -5px;
+                span {
+                    position: absolute;
+                    top: -2px;
+                    right: -2px;
+                    z-index: 2;
+                }
+            }
+        }
+        .sign {
+            margin-top: 13px;
+            >.fl>span {
+                font-size: 18px;
+                &.large {
+                    font-size: 22px;
+                    color: @orange;
+                }
+            }
+            >.fr {
+                padding-top: 10px;
+                a {
+                    .font;
+                    background-color: @green;
+                    padding: 10px 25px;
+                    border: none;
+                    border-radius: 3px;
+                    color: white;
+                    font-size: 18px;
+                    span {
+                        color: @orange;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+.act-detail {
+    .clear();
+    padding: 50px 0 0;
+    .title {
+        color: @green;
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+    .text {
+        padding: 50px 0;
+        border-top: solid 1px #c5c4c4;
+        border-bottom: solid 1px #c5c4c4;
+        color: #838383;
+        .picture {
+            padding: 50px 0;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

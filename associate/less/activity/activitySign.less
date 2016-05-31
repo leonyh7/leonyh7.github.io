@@ -1,0 +1,322 @@
+@import "../variable.less";
+@import "../mixin/content.less";
+@import "../mixin/bread.less";
+@import "../mixin/tab.less";
+@import "../mixin/button.less";
+@import "../mixin/input.less";
+@import "../mixin/border.less";
+@import "../mixin/circle.less";
+@import "../../plugins/wwdialog.less"; //tab variable
+@width: 682px;
+@headHeight: 74px;
+@liWidth: 338px;
+@liheight: 68px;
+@li-size: 28px;
+body {
+    .content(180px);
+}
+.content {
+    font-size: 0;
+    position: relative;
+}
+.main .center-page {
+    padding-bottom: 93px;
+    border-bottom: solid 1px @brown;
+}
+.mid,
+.large {
+    display: inline-block;
+    margin-top: 10px;
+}
+.mid {
+    font-size: 22px;
+}
+.large {
+    font-size: 24px;
+}
+.orange {
+    color: @orange;
+}
+.input {
+    border-bottom: dashed 1px @brown;
+    span {
+        display: inline-block;
+        text-align: center;
+        color: #878787;
+    }
+}
+.sign-form {
+    width: 682px;
+    display: inline-block;
+    .tab();
+    .tab-content {
+        padding-top: 33px;
+        >.tab-item {
+            &:first-child {
+                padding-bottom: 259px;
+            }
+        }
+    }
+    .tab-item.person {
+        margin: auto;
+        width: 450px;
+        div {
+            height: 88px;
+            line-height: 88px;
+            border-bottom: dashed 1px #ccc;
+        }
+        span {
+            font-size: 18px;
+            width: 80px;
+        }
+        .radio();
+        .text(#b7b6b6,#ebedeb);
+        label {
+            color: #9f9f9f;
+            padding-left: 30px;
+            margin-right: 40px;
+            font-size: 18px;
+        }
+        input[type="text"] {
+            .size(368px,38px);
+            padding: 0 15px;
+        }
+    }
+}
+.sign-confirm {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    width: 375px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    .border(@brown);
+    padding: 14px 9px;
+    color: @dark;
+    .info {
+        border-bottom: dashed 1px #ccc;
+        padding-bottom: 30px;
+        .info-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        p {
+            line-height: 26px;
+            .location {
+                color: @green;
+                background-image: url("../../images/icon-location.png");
+                background-repeat: no-repeat;
+                background-position-y: center;
+                padding-left: 20px;
+                margin-left: 30px;
+            }
+        }
+    }
+    .settle {
+        padding: 10px 10px 37px;
+        margin-top: 15px;
+        background-color: #e3fadc;
+        p {
+            font-size: 18px;
+        }
+        .title {
+            font-size: 20px;
+            margin-top: 5px;
+            .dashBorder(28px,24px);
+        }
+        .btn {
+            font-size: 16px;
+            border-radius: 0;
+            margin-top: 60px;
+            .btn-block(#fff,@green,38px);
+        }
+    }
+}
+.team {
+    font-size: 16px;
+    color: #878787;
+    padding-bottom: 40px;
+    span {
+        font-size: 18px;
+    }
+    .text(#b7b6b6,#ebedeb);
+    input[type="text"] {
+        font-size: 14px;
+    }
+    >div {
+        margin: auto;
+        display: block;
+    }
+    .mid-size {
+        width: 450px;
+        &:nth-child(2) {
+            padding-bottom: 85px;
+            margin-bottom: 20px;
+        }
+    }
+    .team-name {
+        span {
+            width: 80px;
+        }
+        input[type="text"] {
+            .size(370px,38px);
+            padding: 0 15px;
+        }
+        padding-bottom: 20px;
+        margin-bottom: 54px;
+    }
+    .title {
+        .dashBorder(28px,24px);
+    }
+    .tab-wrapper {
+        position: relative;
+        margin-top: 28px;
+        .tab-num {
+            font-size: 0;
+            width: 443px;
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 49%;
+                width: 100%;
+                height: 2px;
+                background-color: #e7e5e5;
+                
+            }
+            li {
+                cursor: pointer;
+                .circle(34px,#CAC9C9,#fff,1px,#CAC9C9);
+                font-size: 18px;
+                margin-right: 7px;
+                position: relative;
+                &.complete {
+                    color: #FFFFFF;
+                    background-color: @green;
+                    border: none;
+                    line-height: 34px;
+                }
+            }
+        }
+        .add-num {
+            .add {
+                cursor: pointer;
+                .circle(34px,#fff,#ffb104,1px,#CAC9C9);
+            }
+            p {
+                font-size: 12px;
+            }
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+    .team-wrap {
+        width: 653px;
+        .tab-item {
+            .delete.hidden {
+                visibility: hidden;
+            }
+        }
+        .delete {
+            padding-right: 100px;
+            button {
+                .btn(#FFFFFF,#ffb104,30px);
+                width: 88px;
+                font-size: 18px;
+                float: right;
+            }
+            .clear-fix();
+        }
+    }
+    .team-info {
+        .border(@brown);
+        .member {
+            font-size: 18px;
+        }
+        padding: 20px 101px;
+        .input {
+            height: 87px;
+            line-height: 87px;
+            span {
+                width: 80px;
+            }
+            input[type="text"] {
+                .text(#b7b6b6,#ebedeb);
+                .size(369px,38px);
+                padding: 0 14px;
+            }
+            .radio();
+            &.sex {
+                font-size: 0;
+            }
+            label {
+                padding: 0 30px;
+                margin-left: 15px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+//弹窗
+.white-content {
+    .white-top {
+        text-align: center;
+        font-size: 20px;
+        color: #6a6a6a;
+        border: none;
+        >div {
+            border-bottom: dashed 1px #909090;
+        }
+    }
+    .white-center {
+        text-align: center;
+        input[type="radio"] {
+            display: none;
+            &:checked+label {
+                &:after{
+                    background: url("../../images/radio2-1.png");
+                }
+            }
+        }
+        label {
+            position: relative;
+            display: inline-block;
+            .size(88px,88px);
+            &:after {
+                content: "";
+                display: inline-block;
+                .size(29px,29px);
+                background: url("../../images/radio2-2.png");
+                background-repeat: no-repeat;
+                position: absolute;
+                right: -8px;
+                bottom: 0;
+            }
+            &:last-child {
+                margin-left: 80px;
+            }
+        }
+        img {
+            cursor: pointer;
+        }
+        .chose-pay{
+            font-size: 18px;
+            color: #f0bb10;
+            margin-top: 24px;
+        }
+    }
+    .white-bottom {
+        padding: 0;
+        border-top: none;
+        button {
+            .btn-block(#fff,@green,100%);
+            font-size: 24px;
+        }
+    }
+}

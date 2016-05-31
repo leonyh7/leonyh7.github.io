@@ -1,0 +1,10 @@
+.circle(@size,@color,@bgColor,@borderSize,@borderColor){
+    .size(@size,@size);
+    line-height: @size - 2 * @borderSize;
+    text-align: center;
+    color: @color;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: @bgColor;
+    border: solid @borderSize @borderColor;
+}

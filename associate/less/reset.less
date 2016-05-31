@@ -1,0 +1,87 @@
+@charset "utf-8"; 
+
+/* 加载图标 */
+@font-face {font-family: 'iconfont';
+    src: url('../IconFont/iconfont.eot'); /* IE9*/
+    src: url('../IconFont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../IconFont/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../IconFont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../IconFont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+    .iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 定义所有元素的为ie盒子模型 */
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* 字体 */
+body {
+    font-family: "Microsoft YaHei", "Segoe UI", "Lucida Grande", Helvetica, Arial, FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+    overflow-x: hidden;
+    background-color: rgb(244, 244, 244);
+}
+
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */{
+    margin:0;
+    padding:0;
+}
+/* 定义文字超出部分用省略号代替 */
+.ellipsis{
+    overflow:hidden;
+    white-space:nowrap;
+    -o-text-overflow:ellipsis; /* Opera */
+    text-overflow:ellipsis; /* IE, Safari (WebKit) */
+    _width: 100%; /* IE6 需要定义宽度 */
+}
+/* 清除输入款外边距  */
+input,
+button,
+select,
+textarea {outline: none;}
+
+/* 重置列表元素 */
+ul, ol{list-style:none;}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover,
+a:visited {color: inherit;}
+
+/* 默认按钮样式 */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}

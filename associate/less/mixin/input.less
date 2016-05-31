@@ -1,0 +1,23 @@
+.radio() {
+    label {
+        background-image: url("../../images/radio.png");
+        background-repeat: no-repeat;
+        background-position-x: 0;
+        background-position-y: 3px;
+        cursor: pointer;
+    }
+    input[type="radio"] {
+        display: none;
+        &:checked+label {
+            background-position-y: -30px;
+        }
+    }
+}
+.text(@color,@bgColor) {
+    input[type="text"] {
+        .font;
+        background-color: @bgColor;
+        color: @color;
+        border: none;
+    }
+}

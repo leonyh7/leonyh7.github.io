@@ -1,0 +1,39 @@
+@import "../variable.less";
+@import "../header.activity.less";
+@import "../mixin/content.less";
+@import "../mixin/bread.less";
+body {
+    .content(100px);
+}
+.content {
+    .row {
+        font-size: 0;
+        &:last-child {
+            margin-bottom: 60px;
+        }
+        border-bottom: dashed 1px #B8B8B8;
+        margin-bottom: 48px;
+        .col {
+            .font;
+            display: inline-block;
+            width: 520px;
+            &:first-child {
+                margin-right: 20px;
+            }
+            .acty {
+                display: inline-block;
+                height: 284px;
+                img{
+                    width: 100%;
+                }
+                overflow: hidden;
+            }
+            .description {
+                font-size: 19px;
+                color: #5c5c5c;
+                text-align: center;
+                margin: 10px 0;
+            }
+        }
+    }
+}

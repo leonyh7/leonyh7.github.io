@@ -1,0 +1,51 @@
+@import "../variable.less";
+@import "../mixin/content.less";
+@import "../mixin/bread.less";
+@import "../mixin/angle.less";
+@import "../mixin/pagination.less";
+body {
+    .content(200px);
+}
+.content {
+    .row {
+        &:last-child {
+            margin-bottom: 60px;
+        }
+        .acty {
+            display: inline-block;
+            .font;
+            color: #FFFFFF;
+            img{
+                width: 100%;
+            }
+            .actitle {
+                position: absolute;
+                top: 0;
+                left: 0;
+                >span {
+                    display: block;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    font-size: 18px;
+                    &:first-child {
+                        padding-top: 18px;
+                        font-size: 19px;
+                        span.large {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+            &:first-child {
+                margin-right: 15px;
+            }
+            .make-angle(520px,284px,@green,120px);
+        }
+        padding-bottom: 40px;
+        border-bottom: dashed 1px #B8B8B8;
+        margin-bottom: 48px;
+    }
+}
+.pagination {
+    .pagination();
+}
