@@ -1,0 +1,14 @@
+button{
+	background-color: orange;
+	color: #333;
+	border: none;
+	padding: 5px 10px;
+	font-family: "\5FAE\8F6F\96C5\9ED1";
+	border-radius: 5px;
+}
+body{
+    background-image: url(./dist/936b9708ad58e1114a0e1cfbaf02f94d.jpg);
+}a {
+  text-decoration: none;
+  font-family: "\5FAE\8F6F\96C5\9ED1";
+}
