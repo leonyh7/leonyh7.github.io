@@ -60,3 +60,30 @@ for(var [key, value] of map) {
 	console.log(key);
 	console.log(value);	
 }
+
+function countdown(n) {
+  while (n --> 0)  // "n goes to zero"
+    console.log(n);
+}
+countdown(3);
+
+var mySymbol = Symbol("ok");
+console.log(mySymbol);
+
+var mySet = new Set("13579");
+console.log(mySet.size);
+
+function Tree() {
+  return new Proxy({}, handler);
+}
+var handler = {
+  get: function (target, key, receiver) {
+    if (!(key in target)) {
+      target[key] = Tree();  // 自动创建一个子树
+    }
+    return Reflect.get(target, key, receiver);
+  }
+};
+var tree = Tree();
+tree.branch1.branch2.twig = "green";
+console.log(tree);
