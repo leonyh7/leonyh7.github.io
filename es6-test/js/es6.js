@@ -87,3 +87,17 @@ var handler = {
 var tree = Tree();
 tree.branch1.branch2.twig = "green";
 console.log(tree);
+
+class People {
+    constructor(name) { //构造函数
+          this.name = name;
+    }
+    sayName() {
+          console.log(this.name);
+    }
+    
+    
+    
+}
+var p1 = new People('name');
+console.log(p1);
