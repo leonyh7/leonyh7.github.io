@@ -1,0 +1,23 @@
+.parent {
+  display: flex;
+  flex-direction: row;
+  background-color: #eee;
+  padding: 20px;
+}
+.loop(@counter) when (@counter > 0) {
+  .loop((@counter - 1));    // 递归调用自身
+  &:.child-"@{counter}"{
+      order: 7-@counter; // 每次调用时产生的样式代码
+  }
+  
+}
+.child {
+  width: 100px;
+  height: 100px;
+  background-color: #f00;
+  margin: 20px auto;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  .loop(5); // 调用循环
+}
