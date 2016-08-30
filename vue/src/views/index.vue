@@ -1,4 +1,4 @@
-<style scoped>
+<style lang="sass" scoped>
 	h1 {
 		color: #28a7e1;
 		text-align: center;
@@ -16,6 +16,17 @@
 	img {
 		width: 150px;
 	}
+	
+	.charts{
+		text-align: center;
+		font-family: "微软雅黑";
+		margin-top: 10px;
+		
+		
+	}	
+	a{
+			color: #41b883;
+		}
 </style>
 <template>
 	<h2>
@@ -29,9 +40,10 @@
 	<div id="example">
 		<h2 v-if="greeting">Hello {{ name }}!</h2>
 	</div>
-	<ul>
-		<li v-for="item in items">{{ item.msg }}</li>
-	</ul>
+	<div class="charts">
+		<a v-link="{path: '/chart'}">打开图表页</a>		
+	</div>
+
 
 </template>
 <script>
@@ -47,15 +59,7 @@
 		},
 		data() {
 			return {
-				name: 'vue.js',
-				greeting: true,
-				items: [{
-					msg: 'msg1'
-				}, {
-					msg: 'msg2'
-				}, {
-					msg: 'msg3'
-				}]
+				
 			}
 		},
 		ready() {

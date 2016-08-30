@@ -6,6 +6,12 @@ const routers = {
         component (resolve) {
             require(['./views/index.vue'], resolve);
         }
+    },
+    '/chart': {
+        name: 'chart',
+        component: function(resolve) {
+            require(['./views/chart.vue'], resolve);
+        }
     }
 };
 export default routers;

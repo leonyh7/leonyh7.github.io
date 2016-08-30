@@ -1,3 +1,4 @@
+//简单示例
 var checkObject = function() {};
 checkObject.prototype = {
 	checkName: function() {
@@ -59,6 +60,7 @@ SubClass.prototype.getSubValue = function() {
 }
 var instance = new SubClass();
 console.log(instance);
+
 //安全工厂模式
 var Factory = function(type, content) {
 	if(this instanceof Factory) {
@@ -122,3 +124,74 @@ var Conf = (function() {
 })();
 var count = Conf.get('COUNT');
 console.log(count);
+
+//多元化对象
+//速度类
+function Speed(x, y) {
+	this.x = x;
+	this.y = y;
+}
+Speed.prototype.run = function() {
+		console.log('run start');
+	}
+	//颜色类
+function Color(cl) {
+	this.color = cl;
+}
+Color.prototype.draw = function() {
+		console.log('draw start');
+	}
+	//球类
+function Ball(x, y, c) {
+	this.speed = new Speed(x, y);
+	this.color = new Color(c);
+}
+Ball.prototype.init = function() {
+	this.speed.run();
+	this.color.draw();
+}
+
+var Flyweight = function() {
+	var created = [];
+
+	function create() {
+		var dom = document.createElement('div');
+		document.getElementById('container').appendChild(dom);
+		created.push(dom);
+		return dom;
+	}
+	return {
+		getDiv: function() {
+			if(created.length < 3) {
+				return create();
+			} else {
+				var div = created.shift();
+				created.push(div);
+				return div;
+			}
+		}
+	}
+}
+var article = ["0","1","2","3","4","5","6","7","8","9","10"];
+var paper = 0;
+num = 3,
+len = article.length;
+var ff = new Flyweight();
+for (var i = 0;i<3;i++) {
+	if(article[i])
+	ff.getDiv().innerHTML = article[i];
+}
+document.getElementById('next').onclick = function(){
+	var n = ++paper*num%len;
+	j = 0;
+	for(;j<3;j++){
+		if(article[n+j]){
+			ff.getDiv().innerHTML = article[n+j];
+		}else if(article[n+j-len]){
+			ff.getDiv().innerHTML = article[n+j-len];
+		}else{
+			ff.getDiv().innerHTML = '';			
+		}
+	}
+	
+}

@@ -10,7 +10,7 @@ module.exports = {
     // 入口
     entry: {
         main: './src/main',
-        vendors: ['vue', 'vue-router']
+        vendors: ['vue', 'vue-router', 'echarts']
     },
     // 输出
     output: {
