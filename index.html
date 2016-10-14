@@ -6,6 +6,7 @@
     <script type="text/javascript">
     	
     </script>
+    <link rel="stylesheet" href="polyfill.object-fit.css">
 	<style type="text/css">
 		img{
 			width: 200px;
@@ -19,5 +20,15 @@
 		<li></li>
 	</ul>
 	<img src="http://pic.hulabanban.com/Pub/5da6bca6b1df41939b758aacbf6d6fc3"/>
+	<script src="polyfill.object-fit.js"></script>
+	<script>
+		// Call polyfill to fit in images
+		document.addEventListener('DOMContentLoaded', function () {
+			objectFit.polyfill({
+				selector: 'img',
+				fittype: 'cover'
+			});
+		});
+	</script>
 </body>
 </html>
