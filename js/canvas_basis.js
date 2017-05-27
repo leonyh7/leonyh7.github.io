@@ -86,10 +86,18 @@ roundedRect(context, 53, 119, 49, 16, 6);
 roundedRect(context, 135, 53, 49, 33, 10);
 roundedRect(context, 135, 119, 25, 49, 10);
 
+context.fillStyle = "green";
 context.beginPath();
 context.arc(37, 37, 13, Math.PI / 7, -Math.PI / 7, false);
 context.lineTo(31, 37);
 context.fill();
+
+context.fillStyle = "white";
+context.beginPath();
+context.arc(34, 30, 3, Math.PI / 7, -Math.PI / 7, false);
+context.fill();
+
+context.fillStyle = "black";
 
 for (var i = 0; i < 10; i++) {
     context.fillRect(51 + i * 16, 35, 4, 4);
@@ -100,4 +108,154 @@ for (var i = 0; i < 9; i++) {
 }
 for (var i = 0; i < 10; i++) {
     context.fillRect(51 + i * 16, 99, 4, 4);
+}
+
+context.beginPath();
+context.moveTo(83, 116);
+context.lineTo(83, 102);
+context.bezierCurveTo(83, 94, 89, 88, 97, 88);
+context.bezierCurveTo(105, 88, 111, 94, 111, 102);
+context.lineTo(111, 116);
+context.lineTo(106.333, 111.333);
+context.lineTo(101.666, 116);
+context.lineTo(97, 111.333);
+context.lineTo(92.333, 116);
+context.lineTo(87.666, 111.333);
+context.lineTo(83, 116);
+context.fill();
+
+context.fillStyle = "white";
+context.beginPath();
+context.moveTo(91, 96);
+context.bezierCurveTo(88, 96, 87, 99, 87, 101);
+context.bezierCurveTo(87, 103, 88, 106, 91, 106);
+context.bezierCurveTo(94, 106, 95, 103, 95, 101);
+context.bezierCurveTo(95, 99, 94, 96, 91, 96);
+context.moveTo(103, 96);
+context.bezierCurveTo(100, 96, 99, 99, 99, 101);
+context.bezierCurveTo(99, 103, 100, 106, 103, 106);
+context.bezierCurveTo(106, 106, 107, 103, 107, 101);
+context.bezierCurveTo(107, 99, 106, 96, 103, 96);
+context.fill();
+
+context.fillStyle = "black";
+context.beginPath();
+context.arc(101, 102, 2, 0, Math.PI * 2, true);
+context.fill();
+
+context.beginPath();
+context.arc(89, 102, 2, 0, Math.PI * 2, true);
+context.fill();
+
+// fillStyle
+canvas = document.getElementById('tutorial7');
+context = canvas.getContext('2d');
+
+for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+        context.fillStyle = 'rgba(' + Math.floor(255 - 42.5 * i) + ',' + Math.floor(255 - 42.5 * j) + ',0,.6)';
+        context.fillRect(j * 25, i * 25, 25, 25);
+    }
+}
+
+// strokeStyle
+canvas = document.getElementById('tutorial8');
+context = canvas.getContext('2d');
+
+for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+        context.strokeStyle = 'rgb(0,' + Math.floor(255 - 42.5 * i) + ',' + Math.floor(255 - 42.5 * j) + ')';
+        context.beginPath();
+        context.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+        context.stroke();
+    }
+}
+
+// globalAlpha
+ctx = document.getElementById('tutorial9').getContext('2d');
+// 画背景
+ctx.fillStyle = '#FD0';
+ctx.fillRect(0, 0, 75, 75);
+ctx.fillStyle = '#6C0';
+ctx.fillRect(75, 0, 75, 75);
+ctx.fillStyle = '#09F';
+ctx.fillRect(0, 75, 75, 75);
+ctx.fillStyle = '#F30';
+ctx.fillRect(75, 75, 75, 75);
+ctx.fillStyle = '#FFF';
+
+// 设置透明度值
+ctx.globalAlpha = 0.2;
+
+// 画半透明圆
+for (var i = 0; i < 7; i++) {
+    ctx.beginPath();
+    ctx.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
+    ctx.fill();
+}
+
+// linearGradient
+ctx = document.getElementById('tutorial10').getContext('2d');
+
+var line1 = ctx.createLinearGradient(0, 0, 0, 150);
+line1.addColorStop(0, '#00ABEB');
+line1.addColorStop(0.5, '#fff');
+line1.addColorStop(0.5, '#26C000');
+line1.addColorStop(1, '#000');
+ctx.fillStyle = line1;
+
+var line2 = ctx.createLinearGradient(0, 50, 0, 95);
+line2.addColorStop(0.5, '#000');
+line2.addColorStop(1, 'rgba(0,0,0,0)');
+ctx.strokeStyle = line2;
+
+ctx.fillRect(10, 10, 130, 130);
+ctx.strokeRect(50, 50, 50, 50);
+
+// radialGradient
+ctx = document.getElementById('tutorial11').getContext('2d');
+
+var radial = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
+radial.addColorStop(0, '#A7D30C');
+radial.addColorStop(0.9, '#019F62');
+radial.addColorStop(1, 'rgba(1, 159, 98, 0)');
+
+var radial2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
+radial2.addColorStop(0, '#FF5F98');
+radial2.addColorStop(0.75, '#FF0188');
+radial2.addColorStop(1, 'rgba(255, 1, 136, 0)');
+
+var radial3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
+radial3.addColorStop(0, '#00C9FF');
+radial3.addColorStop(0.8, '#00B5E2');
+radial3.addColorStop(1, 'rgba(0, 201, 255, 0)');
+
+var radial4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
+radial4.addColorStop(0, '#F4F201');
+radial4.addColorStop(0.8, '#E4C700');
+radial4.addColorStop(1, 'rgba(228, 199, 0, 0)');
+
+ctx.fillStyle = radial4;
+ctx.fillRect(0, 0, 150, 150);
+ctx.fillStyle = radial3;
+ctx.fillRect(0, 0, 150, 150);
+ctx.fillStyle = radial2;
+ctx.fillRect(0, 0, 150, 150);
+ctx.fillStyle = radial;
+ctx.fillRect(0, 0, 150, 150);
+
+// createPattern
+ctx = document.getElementById('tutorial12').getContext('2d');
+var into = document.createElement("canvas");
+var ctx2 = into.getContext('2d');
+into.width = 50;
+into.height = 50;
+
+var img = new Image();
+img.src = './logo.png';
+img.onload = function() {
+    ctx2.drawImage(img, 0, 0, 50, 50);
+    var pattern = ctx.createPattern(into, 'repeat');
+    ctx.fillStyle = pattern;
+    ctx.fillRect(0, 0, 150, 150);
 }
