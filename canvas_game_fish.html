@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-ch">
+
+<head>
+    <meta charset="UTF-8">
+    <title>canvas fish game</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+        }
+        
+        .canvas-wrapper {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            margin: 0;
+        }
+        
+        #canvas1 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        #canvas2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="canvas-wrapper">
+            <canvas id="canvas1" width="600" height="600"></canvas>
+            <canvas id="canvas2" width="600" height="600"></canvas>
+        </div>
+    </div>
+    <script src="js/common.js"></script>
+    <script src="js/canvas_fish.js"></script>
+</body>
+
+</html>
