@@ -6,7 +6,7 @@ var aneObj = function() {
 aneObj.prototype.num = 50;
 aneObj.prototype.init = function() {
     for (var i = 0; i < this.num; i++) {
-        this.x[i] = i * 15 + Math.random() * 20;
+        this.x[i] = i * 12 + Math.random() * 10;
         this.len[i] = 200 + Math.random() * 50;
     }
 }
