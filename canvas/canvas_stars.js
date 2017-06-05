@@ -7,7 +7,7 @@
     var edges = []; // 线
 
     var easingFactor = 5.0;
-    var backgroundColor = '#000';
+    var backgroundColor = '#333';
     var nodeColor = '#fff';
     var edgeColor = '#fff';
 
@@ -149,6 +149,17 @@
         render();
         step();
     }
+
+    window.onresize = function() {
+        stars.width = document.body.clientWidth;
+        stars.height = stars.clientHeight;
+
+        if (nodes.length == 0) {
+            constructNodes();
+        }
+
+        render();
+    };
 
     window.onmousemove = function(e) {
         mousePos[0] = e.layerX;

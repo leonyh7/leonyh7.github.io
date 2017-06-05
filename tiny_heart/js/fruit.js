@@ -11,10 +11,10 @@ var fruitObj = function() {
 }
 fruitObj.prototype.num = 20;
 fruitObj.prototype.init = function() {
-    this.alive = Array(this.num).fill(true);
+    this.alive = Array(this.num).fill(false);
     this.x = Array(this.num).fill(0);
     this.y = Array(this.num).fill(0);
-    this.l = Array(this.num).fill(0);
+    // this.l = Array(this.num).fill(0);
     this.orange.src = './img/fruit.png';
     this.blue.src = './img/blue.png';
     for (var i = 0; i < this.num; i++) {
@@ -45,12 +45,14 @@ fruitObj.prototype.draw = function() {
 fruitObj.prototype.born = function(i) {
     var aneID = Math.floor(Math.random() * ane.num);
     var type = Math.random();
-    this.x[i] = ane.x[aneID];
-    this.y[i] = canHeight - ane.len[aneID];
+    this.x[i] = ane.headX[aneID];
+    this.y[i] = ane.headY[aneID];
+    this.l[i] = 0;
     if (type < 0.3) this.fruitType[i] = 'blue';
     else this.fruitType[i] = 'orange';
-    // this.alive[i] = true;   
+    this.alive[i] = true;
 }
 fruitObj.prototype.dead = function(i) {
     this.alive[i] = false;
+    this.born(i);
 }

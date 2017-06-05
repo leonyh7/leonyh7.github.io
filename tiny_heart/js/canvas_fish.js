@@ -6,6 +6,7 @@ var bgPic = new Image();
 var fruit;
 var ane;
 var mom;
+var baby;
 
 var mx, my; //鼠标位置
 
@@ -41,8 +42,9 @@ function init() {
     // 大鱼初始化
     mom = new momObj();
     mom.init();
-
-
+    // 小鱼初始化
+    baby = new babyObj();
+    baby.init();
 }
 
 function gameLoop() {
@@ -62,6 +64,9 @@ function gameLoop() {
     mom.draw();
     // 大鱼碰撞检测
     momFruitsCollosion();
+    // 绘制小鱼
+    baby.draw();
+
 }
 
 function onmMusemove(e) {
